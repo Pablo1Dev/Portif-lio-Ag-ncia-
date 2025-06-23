@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    
+    <!-- links -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="icon" href="source/logoprof.png" type="image/png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js" defer></script>
+    <script src="js/index.js" defer></script>
+    
+    
+    </head>
+      <body>
+        <header>
+            <div class="interface">
+                 <div class="logo">
+                     <a href="index.html">
+                       <img src="source/logoprof.png" height="80px" alt="Logo"/>
+                     </a>
+                 </div><!-- Fim Logo -->
+             
+             <nav class="menu-desktop">
+               <ul>
+                 <li><a href="projetos.html">Projetos</a></li>
+                 <li><a href="capacidades.html">Capacidades</a></li>
+                 <li><a href="sobremim.html">Sobre Mim</a></li>
+               </ul>
+             </nav>
+             
+             <div class="btn-contato">
+                   <a href="contato.html">
+                     <button>Contato</button>
+                   </a>
+             </div><!-- btn-contato -->
+             
+             <div class="btn-abrir-menu" id="btn-menu">
+                 <i class="bi bi-list"></i>
+             </div>
+             
+             <div class="menu-mobile" id="menu-mobile">
+                 <div class="btn-fechar" id="btn-fechar">
+                     <i class="bi bi-x-lg"></i>
+                 </div>
+                 
+                 <nav>
+                   <ul>
+                     <li><a href="projetos.html">Projetos</a></li>
+                     <li><a href="capacidades.html">Capacidades</a></li>
+                     <li><a href="sobremim.html">Sobre Mim</a></li>
+                   </ul>
+                 </nav>
+                 
+             </div><!-- menu-mobile -->
+             <div class="overlay-menu" id="overlay-menu"></div>
+             
+        </div> <!-- Interface -->
+  </header>
+
+  <section class="sobre">
+          <div class="interface">
+            <div class="flex">
+              <div class="img-sobre">
+                <img src="source/FOTO2.jpeg" width="380px" height="500px" alt="eu">
+              </div> <!-- img-sobre -->
+              
+              <div class="txt-sobre">
+                  <h2>MUITO PRAZER <span>SOU PABLO SANTANA</span></h2>
+                  <p>um entusiasta de tecnologia apaixonado por programação e design. Desde jovem desenvolvi um fascínio pela forma como as coisas funcionam e pela estética visual que pode transformar uma simples ideia em algo extraordinário.</p>
+                  <p>Estou constantemente aprendendo e me desafiando a explorar novas técnicas e tendências no campo da tecnologia e do design. Estou animado com a ideia de trabalhar em projetos que me permitam expandir meus horizontes e contribuir para soluções inovadoras.
+Se você compartilha essa paixão por tecnologia, programação e design, adoraria trocar ideias e explorar como podemos colaborar para criar algo incrível juntos!</p>
+                <div class="btn-social">
+                  <a href="https://www.instagram.com/pablo_oak/"><button><i class="bi bi-instagram"></i></button></a>
+                  <a href="https://www.linkedin.com/in/pablo-santana-861189319/"><button><i class="bi bi-linkedin"></i></button></a>
+                  <a href="https://github.com/Pablo1Dev"><button><i class="bi bi-github"></i></button></a>
+                </div>
+              </div> <!-- txt-sobre -->
+            </div>
+          </div>
+      </section> <!-- Sobre -->
+      
+      <section class="portfolio">
+          <div class="interface">
+             <h1 class="titulo">MEUS <span>CERTIFICADOS</span></h1>
+                <div class="galeria">
+                  <div class="grid">
+                      <img src="source/CERTIFICADO-JS.jpeg" alt="Certificado 1" class="certificado" onclick="abrirLightbox(this.src)">
+                      <img src="source/CERTIFICADO-CSS.jpeg" alt="Certificado 2" class="certificado" onclick="abrirLightbox(this.src)">
+                      <img src="source/CERTIFICADO-HTML.jpeg" alt="Certificado 3" class="certificado" onclick="abrirLightbox(this.src)">
+                      <img src="source/CERTIFICADO-JS.jpeg" alt="Certificado 1" class="certificado" onclick="abrirLightbox(this.src)">
+                      <img src="source/CERTIFICADO-CSS.jpeg" alt="Certificado 2" class="certificado" onclick="abrirLightbox(this.src)">
+                      <img src="source/CERTIFICADO-HTML.jpeg" alt="Certificado 3" class="certificado" onclick="abrirLightbox(this.src)">
+                      <img src="source/CERTIFICADO-JS.jpeg" alt="Certificado 1" class="certificado" onclick="abrirLightbox(this.src)">
+                      <img src="source/CERTIFICADO-CSS.jpeg" alt="Certificado 2" class="certificado" onclick="abrirLightbox(this.src)">
+                      <img src="source/CERTIFICADO-HTML.jpeg" alt="Certificado 3" class="certificado" onclick="abrirLightbox(this.src)">
+                    </div>
+                  
+                    <div class="lightbox" id="lightbox" onclick="fecharLightbox()">
+                      <img id="lightbox-img" src="" alt="Certificado Ampliado">
+                    </div>
+              </div> <!-- flex -->
+          </div> <!-- interface -->
+      </section> <!-- portfolio -->
+  
+  
+  <footer>
+          <div class="interface">
+                <div class="line-footer">
+                    <div class="flex">
+                        <div class="logo-footer">
+                            <img src="source/logo.png" width="50px" height="50px" alt="logo">
+                        </div><!-- Logo footer -->
+                            <div class="btn-social">
+                                <a href="https://www.instagram.com/pablo_oak/"><button><i class="bi bi-instagram"></i></button></a>
+                                <a href="https://www.linkedin.com/in/pablo-santana-861189319/"><button><i class="bi bi-linkedin"></i></button></a>
+                                <a href="https://github.com/Pablo1Dev"><button><i class="bi bi-github"></i></button></a>
+                            </div>
+                    </div> <!-- Flex -->
+                </div> <!-- Line Footer 1 -->
+                
+                <div class="line-footer borda">
+                    <p><i class="bi bi-envelope-fill"></i> <a href="mailto:pablosantana2t@gmail.com">pablosantana2t@gmail.com</a><p>
+                </div> <!-- Line Footer 2 -->
+                <div class="direitos">
+                        <h5>Direitos Reservados</h5>
+                        </div>
+            </div> <!-- interface -->
+    </footer>
+  </body>
+</html>

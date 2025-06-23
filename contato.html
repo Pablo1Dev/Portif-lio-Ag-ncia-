@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contato</title>
+    
+    <!-- links -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="icon" href="source/logoprof.png" type="image/png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js" defer></script>
+    <script src="js/index.js" defer></script>
+    
+    
+</head>
+ <body>
+  <header>
+        <div class="interface">
+             <div class="logo">
+                 <a href="index.html">
+                   <img src="source/logoprof.png" height="80px" alt="Logo"/>
+                 </a>
+             </div><!-- Fim Logo -->
+             
+             <nav class="menu-desktop">
+               <ul>
+                 <li><a href="projetos.html">Projetos</a></li>
+                 <li><a href="capacidades.html">Capacidades</a></li>
+                 <li><a href="sobremim.html">Sobre Mim</a></li>
+               </ul>
+             </nav>
+             
+             <div class="btn-contato">
+                   <a href="contato.html">
+                     <button>Contato</button>
+                   </a>
+             </div><!-- btn-contato -->
+             
+             <div class="btn-abrir-menu" id="btn-menu">
+                 <i class="bi bi-list"></i>
+             </div>
+             
+             <div class="menu-mobile" id="menu-mobile">
+                 <div class="btn-fechar" id="btn-fechar">
+                     <i class="bi bi-x-lg"></i>
+                 </div>
+                 
+                 <nav>
+                   <ul>
+                     <li><a href="projetos.html">Projetos</a></li>
+                     <li><a href="capactidade.html">Capacidades</a></li>
+                     <li><a href="sobremim.html">Sobre Mim</a></li>
+                   </ul>
+                 </nav>
+                 
+             </div><!-- menu-mobile -->
+             <div class="overlay-menu" id="overlay-menu"></div>
+             
+        </div> <!-- Interface -->
+  </header>/
+  
+          <section class="formulario">
+             <div class="interface">
+                <h1 class="titulo">ENTRE EM CONTATO <span>COMIGO</span></h1>
+                
+                    <!-- HTML -->
+                <form action="envia" method="POST" id="formulario" novalidate>
+                  <input type="text" name="Nome" id="nome" placeholder="*  Seu Nome" required>
+                  <input type="email" name="e-mail" id="email" placeholder="*  Seu e-mail" required>
+                  <input type="number" name="celular" id="celular" placeholder="Seu celular">
+                  <input type="hidden" name="_captcha" value="false">
+                  <textarea name="Mensagem" id="mensagem" placeholder="*  Sua Mensagem" required></textarea>
+                
+                  <div id="btn-enviar">
+                    <input type="submit" value="ENVIAR" id="submitBtn" disabled>
+                  </div>
+                </form>
+                
+                <script>
+                      const campos = ["nome", "email", "mensagem"];
+                      const btn = document.getElementById("submitBtn");
+                    
+                      function verificarCampos() {
+                        let preenchidos = true;
+                    
+                        campos.forEach(id => {
+                          const campo = document.getElementById(id);
+                          if (!campo.value.trim()) {
+                            campo.classList.add("erro");
+                            preenchidos = false;
+                          } else {
+                            campo.classList.remove("erro");
+                          }
+                        });
+                    
+                        btn.disabled = !preenchidos;
+                      }
+                    
+                      campos.forEach(id => {
+                        document.getElementById(id).addEventListener("input", verificarCampos);
+                      });
+                    
+                      document.getElementById("formulario").addEventListener("submit", function (e) {
+                        e.preventDefault();
+                    
+                        let camposValidos = true;
+                    
+                        campos.forEach(id => {
+                          const campo = document.getElementById(id);
+                          if (!campo.value.trim()) {
+                            campo.classList.add("erro");
+                            camposValidos = false;
+                          } else {
+                            campo.classList.remove("erro");
+                          }
+                        });
+                    
+                        if (camposValidos) {
+                          btnEnviar(); // sua função de sucesso
+                          this.submit();
+                        }
+                      });
+                    
+                      function btnEnviar() {
+                        Swal.fire({
+                          title: "Enviado!",
+                          text: "Obrigado por entrar em contato, retornarei em breve.",
+                          icon: "success",
+                          background: '#031c36',
+                          color: '#fff',
+                          confirmButtonColor: '#0965c0'
+                        });
+                      }
+                    </script>
+            
+            </div> --> <!-- interface -->
+      </section> <!-- formulario -->
+    </main>
+    
+    <footer>
+          <div class="interface">
+                <div class="line-footer">
+                    <div class="flex">
+                        <div class="logo-footer">
+                            <img src="source/logo.png" width="50px" height="50px" alt="logo">
+                        </div><!-- Logo footer -->
+                            <div class="btn-social">
+                                <a href="https://www.instagram.com/pablo_oak/"><button><i class="bi bi-instagram"></i></button></a>
+                                <a href="https://www.linkedin.com/in/pablo-santana-861189319/"><button><i class="bi bi-linkedin"></i></button></a>
+                                <a href="https://github.com/Pablo1Dev"><button><i class="bi bi-github"></i></button></a>
+                            </div>
+                    </div> <!-- Flex -->
+                </div> <!-- Line Footer 1 -->
+                
+                <div class="line-footer borda">
+                  <p><i class="bi bi-envelope-fill"></i> <a href="mailto:pablosantana2t@gmail.com">pablosantana2t@gmail.com</a></p>
+                  <div class="direitos">
+                    <h5>Direitos Reservados</h5>
+                  </div>
+                </div>
+            </div> <!-- interface -->
+    </footer>
+  </body>
+  </html>

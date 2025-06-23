@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Pablo - Projetos, habilidades e contato.">
+    <meta name="author" content="Pablo Santana">
+      <title>Meus Projetos</title>
+    
+    <!-- links -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="icon" href="source/logoprof.png" type="image/png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.all.min.js" defer></script>
+    <script src="js/index.js" defer></script>
+    
+    
+</head>
+   <body>
+      <header>
+        <div class="interface">
+             <div class="logo">
+                 <a href="index.html">
+                   <img src="source/logoprof.png" height="80px" alt="Logo"/>
+                 </a>
+             </div><!-- Fim Logo -->
+             
+             <nav class="menu-desktop">
+               <ul>
+                 <li><a href="projetos.html">Projetos</a></li>
+                 <li><a href="capacidades.html">Capacidades</a></li>
+                 <li><a href="sobremim.html">Sobre Mim</a></li>
+               </ul>
+             </nav>
+             
+             <div class="btn-contato">
+                   <a href="contato.html">
+                     <button>Contato</button>
+                   </a>
+             </div><!-- btn-contato -->
+             
+             <div class="btn-abrir-menu" id="btn-menu">
+                 <i class="bi bi-list"></i>
+             </div>
+             
+             <div class="menu-mobile" id="menu-mobile">
+                 <div class="btn-fechar" id="btn-fechar">
+                     <i class="bi bi-x-lg"></i>
+                 </div>
+                 
+                 <nav>
+                   <ul>
+                     <li><a href="projetos.html">Projetos</a></li>
+                     <li><a href="capacidades.html">Capacidades</a></li>
+                     <li><a href="sobremim.html">Sobre Mim</a></li>
+                   </ul>
+                 </nav>
+                 
+             </div><!-- menu-mobile -->
+             <div class="overlay-menu" id="overlay-menu"></div>
+             
+        </div> <!-- Interface -->
+    </header>
+    
+        <section class="projetos">
+              <h1 class="titulo">MEUS <span>PROJETOS</span></h1>
+              <div class="grid-projetos" id="lista-projetos">
+                
+                <div class="card-projeto">
+                  <img src="source/ACHADEXPROJECT.jpg" alt="Site 1">
+                  <h3>Site da Achadex</h3>
+                  <p>Criação de e-commerce com carrinho e checkout.</p>
+                  <button class="botao-ver-mais"
+                    data-titulo="AchadeX"
+                    data-descricao="AchadeX foi um site de Achados da shopee, armazenando produtos de todas categorias. Porem nao foi um projeto lancado para o publico, apenas para somar experiencia e praticar Criatividade.">Ver mais</button>
+                </div>
+            
+                <div class="card-projeto">
+                  <img src="site2.jpg" alt="Site 2">
+                  <h3>Blog Pessoal</h3>
+                  <p>Plataforma para publicação de artigos com painel de controle.</p>
+                  <button class="botao-ver-mais"
+                    data-titulo="Blog Pessoal"
+                    data-descricao="Blog com sistema de login, edição de postagens e comentários.">Ver mais</button>
+                </div>
+            
+                <div class="card-projeto">
+                  <img src="site3.jpg" alt="Site 3">
+                  <h3>Portfólio</h3>
+                  <p>Site pessoal para exibir projetos e habilidades.</p>
+                  <button class="botao-ver-mais"
+                    data-titulo="Portfólio"
+                    data-descricao="Portfólio com animações, contato por e-mail e versão responsiva.">Ver mais</button>
+                </div>
+            
+                <div class="card-projeto">
+                  <img src="site4.jpg" alt="Site 4">
+                  <h3>Dashboard Admin</h3>
+                  <p>Dashboard interativo com gráficos e controle de dados.</p>
+                  <button class="botao-ver-mais"
+                    data-titulo="Dashboard Admin"
+                    data-descricao="Admin painel com gráficos em tempo real e filtros dinâmicos.">Ver mais</button>
+                </div>
+                
+              </div>
+            </section>
+            
+              <!-- Agora está FORA da grid -->
+              <div class="projeto-detalhado" id="projeto-detalhado">
+                <h3 id="detalhe-titulo"></h3>
+                <p id="detalhe-descricao"></p>
+                
+                <!-- GALERIA DAS FOTOS DO PROJETO -->
+                <div id="galeria-projeto" class="galeria"></div>
+                <button class="voltar" onclick="voltar()">Voltar</button>
+              </div>
+            </section>
+            
+          
+    
+      <footer>
+          <div class="interface">
+                <div class="line-footer">
+                    <div class="flex">
+                        <div class="logo-footer">
+                            <img src="source/logo.png" width="50px" height="50px" alt="logo">
+                        </div><!-- Logo footer -->
+                            <div class="btn-social">
+                                <a href="https://www.instagram.com/pablo_oak/"><button><i class="bi bi-instagram"></i></button></a>
+                                <a href="https://www.linkedin.com/in/pablo-santana-861189319/"><button><i class="bi bi-linkedin"></i></button></a>
+                                <a href="https://github.com/Pablo1Dev"><button><i class="bi bi-github"></i></button></a>
+                            </div>
+                    </div> <!-- Flex -->
+                </div> <!-- Line Footer 1 -->
+                
+                <div class="line-footer borda">
+                  <p><i class="bi bi-envelope-fill"></i> <a href="mailto:pablosantana2t@gmail.com">pablosantana2t@gmail.com</a></p>
+                  <div class="direitos">
+                    <h5>Direitos Reservados</h5>
+                  </div>
+                </div>
+            </div> <!-- interface -->
+      </footer>
+    </body>
+  </html>
